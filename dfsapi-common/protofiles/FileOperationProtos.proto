@@ -1,0 +1,156 @@
+package protocol.objects;
+
+option java_package = "dfs.common.protocol.objects";
+option java_outer_classname = "FileOperationProtos";
+
+// **** General Operation identifiers
+message ClientIdentifierProto {
+        required int32 id = 1;
+        required string host = 2;
+        required int32 listenerPort = 3;
+}
+
+message OperationIdentifierProto {
+        required int32 id = 1;
+		optional int32 operationResponseType = 2;
+}
+
+// **** General file information to be passed
+message FilePathProto {
+	optional string path = 1;
+}
+
+message FileInfoProto {
+	optional FilePathProto path = 1;
+	optional string filename = 2;
+	optional string type = 3;
+}
+
+message FileInfoReqProto {
+	optional FilePathProto path = 1;
+	optional string filename = 2;
+}
+message FileInfoResProto {
+	optional FilePathProto path = 1;
+	optional string filename = 2;
+	optional int32 size = 3;
+}
+
+// **** Protocol for creating new directories
+message MkDirClientRequestProto {
+	required string path = 1;
+}
+
+message MkDirControllerResponseProto {
+	optional string errorMessage = 1;
+}
+
+// **** Protocol for creating an empty file
+message TouchClientRequestProto {
+	required string path = 1;
+	required string filename = 2;
+}
+
+message TouchControllerResponseProto {
+	optional string errorMessage = 1;
+}
+
+// **** Protocol for writing to a file
+message FileWriteClientRequestProto {
+	required string path = 1;
+	required string filename = 2;
+	required int32 totalFileSize = 3;
+	optional int32 offset = 4;
+	optional int32 size = 5;
+}
+
+message FileWriteControllerResponseProto {
+	required OperationIdentifierProto operationIdentifier = 1;
+	optional string errorMessage = 2;
+}
+
+message FileWriteControllerRequestProto {
+    required int32 clientId = 1;
+    required string clientHost = 2;
+    required int32 clientPort = 3;
+    required int32 operationId = 4;
+    required bytes filekey = 5;
+	required int32 totalFileSize = 6;
+	optional int32 offset = 7;
+	optional int32 size = 8;
+}
+
+message FileWriteDatanodeResponseProto {
+    required string datanodeId = 1;
+	optional string errorMessage = 2;
+}
+
+// **** Protocol for reading from a file
+message FileReadClientRequestProto {
+	required string path = 1;
+	required string filename = 2;
+	optional int32 offset = 4;
+	optional int32 size = 5;
+}
+
+message FileReadControllerResponseProto {
+	required OperationIdentifierProto operationIdentifier = 1;
+	optional string errorMessage = 2;
+}
+
+message FileReadControllerRequestProto {
+    required int32 clientId = 1;
+    required string clientHost = 2;
+    required int32 clientPort = 3;
+    required int32 operationId = 4;
+    required bytes filekey = 5;
+	optional int32 offset = 6;
+	optional int32 size = 7;
+}
+
+message FileReadDatanodeResponseProto {
+    required string datanodeId = 1;
+	optional string errorMessage = 2;
+}
+
+// **** Protocol regarding the Replication Pipeline
+message ReplicationPipelineNextDatanodeRequestProto {
+	required string datanodeId = 1;
+}
+
+message ReplicationPipelineNextDatanodeResponseProto {
+	optional string nextDatanodeId = 1;
+	optional string host = 2;
+    optional int32 startPort = 3;
+}
+
+message ReplicationPipelineOperationIdentifierProto {
+	required OperationIdentifierProto operationIdentifier = 1;
+	required int32 replicationOperationTypeId = 2;
+}
+
+message ReplicationPipelineStartFileWriteProto {
+	required bytes fileKey = 1;
+	optional int32 fileSize = 2;
+}
+
+message ReplicationPipelineDataBlockWriteProto {
+	required int32 moreData = 1;
+}
+
+// LS - Likely deprecated
+
+message FileInfoLsProto {
+	optional FilePathProto startingpath = 1;
+	repeated FileInfoProto file = 2;
+}
+
+message FileOperationLsRequestProto {
+	required int32 clientId = 1;
+	required string clientHost = 2;
+	required int32 clientPort = 3;
+	required int32 operationId = 4;
+	required int32 operationType = 5;
+	required FilePathProto path = 6;
+}
+

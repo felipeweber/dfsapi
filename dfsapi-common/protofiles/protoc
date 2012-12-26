@@ -1,0 +1,1 @@
+protoc FileOperationProtos.proto -I=. --java_out=.

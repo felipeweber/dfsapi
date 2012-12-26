@@ -1,0 +1,12 @@
+package protocol.objects;
+
+option java_package = "dfs.common.protocol.objects";
+option java_outer_classname = "DatanodesInfoProtos";
+
+message DatanodeIdProto {
+	optional string datanodeId = 1;
+}
+
+message DatanodeIdsListProto {
+	repeated DatanodeIdProto datanodeIds = 1;
+}

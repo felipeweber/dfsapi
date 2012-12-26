@@ -1,0 +1,12 @@
+package protocol.objects;
+
+option java_package = "dfs.common.protocol.objects";
+option java_outer_classname = "DatanodeSynchProtos";
+
+message RegisterDatanodeResponseProtos {
+	required int32 response = 1;
+}
+
+message RegisterDatanodeParmsProtos {
+	required string id = 1;
+}

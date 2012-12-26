@@ -1,0 +1,116 @@
+Thread 0xa403d700
+
+  locals:
+
+Thread 0x85b7a780
+  at sun.misc.Unsafe.park(ZJ)V (Native Method)
+  at java.util.concurrent.locks.LockSupport.park(Ljava/lang/Object;)V (LockSupport.java:186)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await()V (AbstractQueuedSynchronizer.java:2043)
+  at java.util.concurrent.LinkedBlockingQueue.take()Ljava/lang/Object; (LinkedBlockingQueue.java:442)
+  at java.util.concurrent.ThreadPoolExecutor.getTask()Ljava/lang/Runnable; (ThreadPoolExecutor.java:1043)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V (ThreadPoolExecutor.java:1103)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run()V (ThreadPoolExecutor.java:603)
+  at java.lang.Thread.run()V (Thread.java:722)
+
+  locals:
+    objectId=0x85b7a968, line=1
+    objectId=0x85b7a780, line=1
+    objectId=0x85b7a968, line=2
+    objectId=0xa402ea68, line=2
+    objectId=0x85b7a908, line=3
+    objectId=0x85b7a930, line=3
+    objectId=0x85b7a940, line=3
+    objectId=0x85b7a8b0, line=4
+    objectId=0x85b7a8b0, line=5
+    objectId=0x85b7aaa8, line=5
+    objectId=0x85b7aaa8, line=6
+    objectId=0x85b7a780, line=7
+
+Thread 0x85b7a7e8
+  at sun.misc.Unsafe.park(ZJ)V (Native Method)
+  at java.util.concurrent.locks.LockSupport.park(Ljava/lang/Object;)V (LockSupport.java:186)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await()V (AbstractQueuedSynchronizer.java:2043)
+  at java.util.concurrent.LinkedBlockingQueue.take()Ljava/lang/Object; (LinkedBlockingQueue.java:442)
+  at java.util.concurrent.ThreadPoolExecutor.getTask()Ljava/lang/Runnable; (ThreadPoolExecutor.java:1043)
+  at java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V (ThreadPoolExecutor.java:1103)
+  at java.util.concurrent.ThreadPoolExecutor$Worker.run()V (ThreadPoolExecutor.java:603)
+  at java.lang.Thread.run()V (Thread.java:722)
+
+  locals:
+    objectId=0x85b7a968, line=1
+    objectId=0x85b7a7e8, line=1
+    objectId=0x85b7a968, line=2
+    objectId=0xa3fcbd68, line=2
+    objectId=0x85b7a908, line=3
+    objectId=0x85b7a930, line=3
+    objectId=0x85b7a940, line=3
+    objectId=0x85b7a8b0, line=4
+    objectId=0x85b7a8b0, line=5
+    objectId=0x85b7a880, line=5
+    objectId=0x85b7a880, line=6
+    objectId=0x85b7a7e8, line=7
+
+Thread 0x85b7a718
+  at java.net.PlainSocketImpl.socketAccept(Ljava/net/SocketImpl;)V (Native Method)
+  at java.net.AbstractPlainSocketImpl.accept(Ljava/net/SocketImpl;)V (AbstractPlainSocketImpl.java:398)
+  at java.net.ServerSocket.implAccept(Ljava/net/Socket;)V (ServerSocket.java:522)
+  at java.net.ServerSocket.accept()Ljava/net/Socket; (ServerSocket.java:490)
+  at dfs.client.comm.datanode.listener.FileOperationListener.run()V (FileOperationListener.java:17)
+
+  locals:
+    objectId=0x85384e38, line=0
+    objectId=0x85384e48, line=1
+    objectId=0xa3fcd228, line=1
+    objectId=0x85384f18, line=2
+    objectId=0xa3fcd208, line=2
+    objectId=0xa3fcd228, line=2
+    objectId=0x85384f18, line=3
+    objectId=0xa3fcd208, line=3
+    objectId=0x85b7a718, line=4
+    objectId=0x85384f18, line=4
+
+Thread 0x856dfbd0
+
+  locals:
+
+Thread 0x856dfb68
+
+  locals:
+
+Thread 0x856dfb00
+
+  locals:
+
+Thread 0x85b78cb0
+
+  locals:
+
+Thread 0x85b7a5e0
+  at java.lang.Object.wait(J)V (Native Method)
+  at java.lang.ref.ReferenceQueue.remove(J)Ljava/lang/ref/Reference; (ReferenceQueue.java:135)
+  at java.lang.ref.ReferenceQueue.remove()Ljava/lang/ref/Reference; (ReferenceQueue.java:151)
+  at java.lang.ref.Finalizer$FinalizerThread.run()V (Finalizer.java:177)
+
+  locals:
+    objectId=0x85b7a4a8, line=1
+    objectId=0x85b7a4c0, line=1
+    objectId=0x85b7a4a8, line=2
+    objectId=0x85b7a5e0, line=3
+
+Thread 0x85b7a648
+  at java.lang.Object.wait(J)V (Native Method)
+  at java.lang.Object.wait()V (Object.java:503)
+  at java.lang.ref.Reference$ReferenceHandler.run()V (Reference.java:133)
+
+  locals:
+    objectId=0x85b7a1b0, line=1
+    objectId=0x85b7a648, line=2
+    objectId=0x85b7a1b0, line=2
+
+Thread 0x85b7a6b0
+  at dfs.client.test.Main.main([Ljava/lang/String;)V (Main.java:60)
+
+  locals:
+    objectId=0x8539e298, line=0
+    objectId=0x8539e2a8, line=0
+

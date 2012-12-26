@@ -1,0 +1,21 @@
+{"type":"D",
+  "name":"/",
+  "children":
+  		{"type":"D",
+  		 "name":"dir1",
+  		 "children":null,
+  		 "readLocks":null,
+  		 "writeLock":null,
+  		 "validDatanodesId":[
+  		 	"datanode1"]},
+  		 {"type":"F",
+  		  "name":"file1",
+  		  "children":null,
+  		  "readLocks":null,
+  		  "writeLock":null,
+  		  "validDatanodesId":
+  		  	["datanode1"]}],
+  		  "readLocks":null,
+  		  "writeLock":null,
+  		  "validDatanodesId":["datanode1"]
+  		  }
