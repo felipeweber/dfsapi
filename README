@@ -1,0 +1,21 @@
+DFSAPI - An experimental Distributed File System
+The objective of this Distributed File System is to have very heterogenous configuration options, and it's aimed at developers.
+The current implementation predicts different configurations for local cache in the Client application. Besides the usual cache total size and cache block size, the implementation also provides an easy interface for a developer to create his own Cache Replacement Policy (it ships with two policies pre-created: LFU and LRU).
+
+All applications are developed in Java, being: Controller, Datanode and Client (dfsapi-controller, dfsapi-server and dfsapi-client projects).
+
+The Controller manages the Distributed File System: it contains files metadata, manages current operations and intermediates all communication.
+The Datanode(s) store the files, in the form of data blocks.
+The Client(s) perform read and write operations over the Distributed File System.
+
+The system will always contain just one Controller, but several Datanodes and Clients.
+
+Controller and Datanode are standalone .jar runnable applications.
+
+To create and read/write files from the system, one must use an API (DFSFileManager) available in the Client application.
+
+All applications will read from a .config file (a sample of that file can be found in the dfsapi-common project) to know the IP and Port of all servers that are part of the system.
+
+Altough fully functional, this is still an experiment, and has several limitations, specially concerning security and fault tolerance.
+
+Developed Felipe Weber <wbr.felipe at gmail dot com>
